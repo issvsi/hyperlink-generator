@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hyperlink Generator</title>
+</head>
+<body>
+        <h1>hyperlink generator</h1>
+        <input type="text" id="DisplayText" value="Provide a display text">
+        <input type="text" id="Link" value="Provide a link">
+        <input type="button" value="Generate" onclick="generate()">
+        <h2 id="disclaimer"></h2>
+        <div id="hyperlink"></div>
+    <script>
+        function generate(){
+            var text = document.getElementById("text").value
+            var link = document.getElementById("link").value
+            document.getElementById("disclaimer").innerHTML("COPY-PASTE HYPERLINK:")
+            document.getElementById("hyperlink").innerHTML("[" + text + "](" + link + ")")
+        }
+    </script>
+</body>
+</html>
